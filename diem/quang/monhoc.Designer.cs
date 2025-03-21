@@ -28,8 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // monhoc
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "monhoc";
+            this.Size = new System.Drawing.Size(997, 512);
+            this.Load += new System.EventHandler(this.monhoc_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

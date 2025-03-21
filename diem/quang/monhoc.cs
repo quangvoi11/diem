@@ -16,5 +16,11 @@ namespace diem.quang
         {
             InitializeComponent();
         }
+
+        private void monhoc_Load(object sender, EventArgs e)
+        {
+            // test repo nanana
+            // if you see this, it means that the repo is working
+        }
     }
 }
