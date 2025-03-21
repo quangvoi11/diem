@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6DBB0AD-D4DF-469B-9EBC-C4ED30EE6B5D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>diem</RootNamespace>
+    <AssemblyName>diem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="quang\khoahoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="quang\khoahoc.Designer.cs">
+      <DependentUpon>khoahoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="quang\monhoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="quang\monhoc.Designer.cs">
+      <DependentUpon>monhoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="quang\theloai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="quang\theloai.Designer.cs">
+      <DependentUpon>theloai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="quang\tinchi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="quang\tinchi.Designer.cs">
+      <DependentUpon>tinchi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trangchu.Designer.cs">
+      <DependentUpon>trangchu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangnhap.Designer.cs">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="taikhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="taikhoan.Designer.cs">
+      <DependentUpon>taikhoan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dangnhap.resx">
+      <DependentUpon>dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quang\khoahoc.resx">
+      <DependentUpon>khoahoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trangchu.resx">
+      <DependentUpon>trangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="taikhoan.resx">
+      <DependentUpon>taikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="giang\" />
+    <Folder Include="hai\" />
+    <Folder Include="thong\" />
+    <Folder Include="vu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-badge-24.png" />
+    <None Include="Resources\icons8-exit-24.png" />
+    <None Include="Resources\icons8-microsoft-excel-24.png" />
+    <None Include="Resources\icons8-export-excel-24.png" />
+    <None Include="Resources\icons8-search-24.png" />
+    <None Include="Resources\icons8-update-24.png" />
+    <None Include="Resources\icons8-white-circle-24.png" />
+    <None Include="Resources\icons8-add-24.png" />
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-analytics-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-assignment-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-badge-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bell-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-book-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-branch-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-category-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chalkboard-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circle-chart-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-class-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-credit-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dialog-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-export-excel-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-export-pdf-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-graduate-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-man-teacher-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pdf-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pen-24 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pen-24 %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pen-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-scales-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-transaction-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-verified-account-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-white-circle-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trangchu1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
