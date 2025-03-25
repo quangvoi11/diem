@@ -1,4 +1,5 @@
 ﻿using diem.giang;
+using diem.quang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,6 +70,42 @@ namespace diem
             panel_main.Controls.Add(khoahoc); // Thêm vào panel
 
             this.Text = "KHÓA HỌC"; // Đặt tiêu đề form
+        }
+
+        private void btn_monhoc_Click(object sender, EventArgs e)
+        {
+            panel_main.Controls.Clear(); // Xóa control cũ (nếu có)
+
+            monhoc monhoc = new monhoc(); // Sử dụng đúng UserControl "monhoc"
+            monhoc.Dock = DockStyle.Fill; // Đổ đầy panel
+
+            panel_main.Controls.Add(monhoc); // Thêm vào panel
+
+            this.Text = "MÔN HỌC";
+        }
+
+        private void btn_tinchi_Click(object sender, EventArgs e)
+        {
+            panel_main.Controls.Clear(); 
+
+            tinchi tinchi = new tinchi();
+            tinchi.Dock = DockStyle.Fill; 
+
+            panel_main.Controls.Add(tinchi);
+
+            this.Text = "TÍN CHỈ";
+        }
+
+        private void btn_theloai_Click(object sender, EventArgs e)
+        {
+            panel_main.Controls.Clear(); 
+
+            theloai theloai = new theloai();
+            theloai.Dock = DockStyle.Fill; 
+
+            panel_main.Controls.Add(theloai); 
+
+            this.Text = "THỂ LOẠI";
         }
     }
 }
