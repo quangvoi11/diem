@@ -14,8 +14,8 @@ namespace diem.quang
 {
     public partial class theloai: UserControl
     {
-        SqlConnection con = new SqlConnection("Data Source = QUANGVOIDEVICE\\SQLEXPRESS;Initial Catalog = diem; Integrated Security = True");
-
+        SqlConnection con = quanlidiem.con;
+             
         private void OpenConnection()
         {
             if (con.State == ConnectionState.Closed) con.Open();

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="quang\Quản lí điểm.cs" />
     <Compile Include="quang\khoahoc.cs">
       <SubType>UserControl</SubType>
     </Compile>

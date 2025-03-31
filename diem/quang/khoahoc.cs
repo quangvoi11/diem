@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using xls = Microsoft.Office.Interop.Excel;
+using diem.quang;
 
 namespace diem.giang
 {
     public partial class khoahoc : UserControl
     {
-        private SqlConnection con = new SqlConnection("Data Source = QUANGVOIDEVICE\\SQLEXPRESS;Initial Catalog = diem; Integrated Security = True");
+        SqlConnection con = quanlidiem.con;
 
         private void OpenConnection()
         {
@@ -308,7 +309,7 @@ namespace diem.giang
                     da.Fill(dtable);
 
                     // Xuất dữ liệu sang Excel
-                    ExportExcel(dtable, "Danh sách sản phẩm");
+                    ExportExcel(dtable, "Danh sách Khóa Học");
                 }
 
             }

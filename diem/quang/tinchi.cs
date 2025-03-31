@@ -13,7 +13,8 @@ namespace diem.quang
 {
     public partial class tinchi: UserControl
     {
-        SqlConnection con = new SqlConnection("Data Source = QUANGVOIDEVICE\\SQLEXPRESS;Initial Catalog = diem; Integrated Security = True");
+        SqlConnection con = quanlidiem.con;
+
 
         private void OpenConnection()
         {
